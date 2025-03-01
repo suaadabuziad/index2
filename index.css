@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* القسم الأول */
+.one {
+    flex-direction: row-reverse;
+    background-color: #f5f5f5;
+}
+
+.one img, .three img {
+    width: 150px;
+    height: 150px;
+    border: 10px solid ;
+    border-radius: 30px;
+}
+.button{
+  padding: 1px 1px;
+background-color: orangered;
+color: white;
+border: 10px thin;
+border-radius: 10px;
+font-size: 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.one .text, .three .text {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+/* القسم الثاني */
+.two {
+    display: flex;
+    justify-content: center;
+    background-color: #e0e0e0;
+}
+
+.image-box {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.image-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 10px solid;
+}
+
+/* القسم الثالث */
+.three {
+    flex-direction: row-reverse;
+    background-color: #d9d9d9;
+}
+
+.cta-button {
+    padding: 1px 1px ;
+    background-color: red;
+    color: white;
+    border: 10px thin;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff7533;
+    transform: scale(1.1);
+}
+.three .text h3{
+  text-inline:center;
+}
+#cofe{
+  color: red;
+}
+#forall{
+  color: red;
+}
+
+/* تحسين الاستجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .one img, .three img {
+        width: 80%;
+    }
+
+    .one .text, .three .text {
+        width: 100%;
+    }
+
+    .image-box {
+        flex-direction: column;
+    }
+
+    .image-item img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+}
+ 
